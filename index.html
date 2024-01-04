@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Kasil prototype</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+	<style type="text/css">
+		#dropzone {
+  			display: flex;
+  			justify-content: center;
+  			align-items: center;
+  			width: 100vw;
+  			height: 100vh;
+  			position: absolute;
+  			overflow: hidden;
+		}
+
+		canvas {
+			display: block;
+			width:210vh;
+			height:210vh;
+			/*	8 min cycle */
+  			animation: rotating 480s linear infinite;
+		}
+		@keyframes rotating {
+		  from {
+		    transform: rotate(0deg);
+		  }
+		  to {
+		    transform: rotate(360deg);
+		  }
+		}
+
+		#dropzone .gradients{
+			position: absolute;
+			width:100%;
+			height:100%;
+			top:0;
+			left:0;
+			bottom:0;
+			right:0;
+			background-image: radial-gradient(transparent 60%, #fff 90%);
+			/*box-shadow: 
+				0px 0px 20rem #fff inset,
+				0px 0px 20rem #fff inset,
+				0px 0px 20rem #fff inset;*/
+		}
+	</style>
+</head>
+<body>
+
+	<!-- <img class="background-image" src="assets/images/xray-matteblack.jpg"> -->
+	<div class='canvasCont' id="service-main-img-cont">
+		<div id="dropzone">
+			<canvas id="canvas"></canvas>
+			<canvas id="_canvas" style="display: none;"></canvas>
+			<img id="canvasImg" src="assets/images/xray-oakgreen.jpg" width="4000" height="2500" style="display: none;"/>
+			<div class="gradients"></div>
+		</div>
+		
+	</div>
+	<section class="nav">
+		<div class="whiteBackground folded"></div>
+		<section class="nav-content">
+			<div class="logo">
+			<img id="logo" src="assets/logo/logo.svg">
+			</div>
+			<div class="menu uppercase">
+			<ul>
+				<li id="services">Services</li>
+				<li>About</li>
+				<li>Medspa</li>
+				<li>Patient Information</li>
+				<li>Reviews</li>
+				<li>Contact</li>
+				<li>Book Appointment</li>
+			</ul>
+			<div class="address sans">
+				<p>18 EAST 50TH STREET</p>
+				<p>8TH FLOOR</p>
+				<p>NEW YORK, NY, 10022</p>
+				<br>
+				<p>212 688 2452</p>
+			</div>
+			</div>
+		</section>
+	</section>
+	<section class="main folded">
+		<div class="image folded">
+			<img src="assets/images/services.jpg">
+			<!-- <div class='canvasCont' id="service-main-img-cont"></div> -->
+			<img class="hide" id="service-CD-img" src="assets/images/cosmetic-dentistry.png">
+			<img class="hide" id="service-DT-img" src="assets/images/dental-tech2.jpg">
+			<img class="hide" id="service-GFD-img" src="assets/images/teeth-tech.jpg">
+			<img class="hide" id="service-RD-img" src="assets/images/restorative-dentistry2.jpg">
+			<img class="hide" id="service-ITL-img" src="assets/images/dental-tech3.jpg">
+			<img class="hide" id="dental-bonding-img" src="assets/images/dental-bonding.jpg">
+		</div>
+		<div class="content">
+			<div class="content-content">
+				<ul>
+				<li id="service-CD">
+					<details>
+						<summary class="uppercase">Cosmetic Dentistry</summary>
+						<ul class="sans">
+							<li id="dental-bonding">Dental Bonding</li>
+							<li>Dental Veneers</li>
+							<li>Invisalign® Clear Aligners</li>
+							<li>Smile Design</li>
+							<li>Teeth Whitening</li>
+						</ul>
+					</details>
+				</li>
+				<li id="service-DT">
+					<details>
+						<summary class="uppercase">Dental Technology</summary>
+					</details>
+				</li>
+				<li id="service-GFD">
+					<details>
+						<summary class="uppercase">General & Family Dentistry</summary>
+						<ul class="sans">
+							<li>Cavity Prevention</li>
+							<li>Dental Emergencies</li>
+							<li>Dental Sealants</li>
+							<li>Fluoride Treatment</li>
+							<li>Gum Disease Treatment</li>
+							<li>Oral Hygiene</li>
+							<li>Sedation Dentistry</li>
+							<li>TMJ Treatment</li>
+							<li>Tooth Extractions</li>
+						</ul>
+					</details>
+				</li>
+				<li id="service-RD">
+					<details>
+						<summary class="uppercase">Restorative Dentistry</summary>
+					</details>
+				</li>
+				<li id="service-ITL">
+					<details>
+						<summary class="uppercase">Introducing TriLift™ by Lumenis</summary>
+					</details>
+				</li>
+				</ul>
+				<div class="description sans">
+					Here at Kasil Dentistry, we strive to think of our patients first and foremost, placing their needs as our highest priority. We offer comprehensive care to address all your needs and offer emergency dental care to patients struggling with any urgent oral health situations.
+				</div>
+			</div>
+			<div class="content2 hide">
+				<div class="header">
+					<h2 class="uppercase">Dental Bonding</h2>
+					<span class="content2-close">✕</span>
+				</div>
+				
+				<div class="sans">
+					<p>
+						If your teeth appear misshapen or discolored, our dentist and team would be happy to provide you with dental bonding here at Kasil Dentistry. This procedure involves the use of a composite resin to ensure you receive a healthy and natural looking smile!
+					</p>
+					<p>
+						Dental bonding is a simple, conservative way to improve the appearance of your smile. During the bonding process, our skilled dentist and team place a composite resin material directly onto the tooth structure. Because the resin is malleable and puttylike when first applied, we can shape and sculpt it to fit your tooth and correct flaws in the tooth’s appearance. The composite resin is then hardened, trimmed and polished to provide a lasting, aesthetic restoration for your smile. Dental bonding typically requires just one visit to our welcoming dental office, and because this treatment usually necessitates little to no tooth preparation, you can rest assured that your visit will be quick and comfortable.
+					</p>
+					<p>
+						Our dentist may recommend dental bonding in order to close gaps and spaces between teeth, improve misshapen teeth, lighten stained or discolored teeth, or restore chipped or cracked teeth. We will use a shade of composite resin that matches the original color of your teeth for a natural-looking effect. If you would prefer, we can use a slightly lighter shade to whiten the color of your teeth.
+					</p>
+				</div>
+			</div>
+		</div>
+
+	</section>
+</body>
+<script type="text/javascript" src="assets/js/kaleidoscope.js"></script>
+<script type="text/javascript">
+	let services = document.getElementById('services');
+	let main = document.querySelector('.main');
+	let white = document.querySelector('.whiteBackground');
+	let logo = document.querySelector('#logo');
+	let content = document.querySelector('.main > .content');
+	let contentLists = content.querySelectorAll('.content-content > ul > li');
+	let cosmeticDentLists = content.querySelectorAll('#service-CD ul > li');
+	let dentalBonding = content.querySelector('#dental-bonding');
+	let content2 = content.querySelector('.content2');
+	let content2Close = content.querySelector('.content2-close');
+	let dentalBondingImg = document.querySelector('#dental-bonding-img');
+
+	contentLists.forEach((list) => {
+		let listImg = main.querySelector(`#${list.id}-img`);
+		let details = list.querySelector(':scope  details');
+
+
+
+		details.addEventListener("toggle", function() {
+			if(details.open){
+				console.log('its open!')
+				list.removeEventListener('mouseleave', handlemouseleave, true);
+			}else{
+				console.log('its closed')
+				list.addEventListener('mouseleave', handlemouseleave, true);
+			}
+			
+		});
+
+		list.addEventListener('mouseover', function(){
+			listImg.classList.remove('hide');
+			listImg.classList.add('show');
+		});
+
+		list.addEventListener('mouseleave', handlemouseleave, true);
+
+		function handlemouseleave(){
+			listImg.classList.remove('show');
+			listImg.classList.add('hide');
+		}
+	});
+
+	dentalBonding.addEventListener('click', function(){
+		console.log('dentalBonding clicked');
+		content2.classList.remove('hide');
+		content2.classList.add('show');
+
+		dentalBondingImg.classList.remove('hide');
+		dentalBondingImg.classList.add('show');
+	});
+
+	content2Close.addEventListener('click', function(){
+		if(content2.classList.contains('show')){
+			content2.classList.remove('show');
+			content2.classList.add('hide');
+
+			dentalBondingImg.classList.remove('show');
+			dentalBondingImg.classList.add('hide');
+		}
+	});
+
+	logo.onmouseover = function(){
+		logo.src = "assets/logo/logo-green.svg"
+	}
+
+	logo.onmouseleave = function(){
+		logo.src = "assets/logo/logo.svg"
+	}
+
+	logo.onclick = function(){
+		location.reload();
+	}
+
+
+	services.onclick = function(){
+		services.classList.add('menu-selected');
+
+		white.classList.remove('folded');
+		white.classList.add('out');
+
+		main.classList.remove('folded');
+		main.classList.add('out');
+	}
+
+
+	// only allow one <details> to be open
+	document.querySelectorAll('details').forEach((D,_,A)=>{
+  		D.ontoggle =_=>{ if(D.open) A.forEach(d =>{ if(d!=D) d.open=false })}
+	})
+
+</script>
+</html>
