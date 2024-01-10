@@ -126,8 +126,12 @@ body:has(.main.out) .nav .whiteBackground{
 }
 
 .main.out .image{
-	transition-delay: 500ms;
 	left:0;
+}
+
+.main.out .content{
+/*	right:10vw;*/
+	transition-delay: 300ms;
 }
 
 .image{
